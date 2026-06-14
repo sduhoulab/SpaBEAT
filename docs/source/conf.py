@@ -2,7 +2,7 @@
 
 # -- Project information
 
-project = 'SpaBE'
+project = 'SpaBEC'
 copyright = '2026, Shandong University'
 author = 'Qingzhen Hou'
 
@@ -26,10 +26,21 @@ intersphinx_mapping = {
 intersphinx_disabled_domains = ['std']
 
 templates_path = ['_templates']
+exclude_patterns = []
 
 # -- Options for HTML output
 
 html_theme = 'sphinx_rtd_theme'
+html_static_path = ['_static']
+html_title = 'SpaBE Reproducibility'
+html_short_title = 'SpaBE'
+
+html_theme_options = {
+    'navigation_depth': 3,
+    'collapse_navigation': False,
+    'sticky_navigation': True,
+    'titles_only': False,
+}
 
 # -- Options for EPUB output
 epub_show_urls = 'footnote'

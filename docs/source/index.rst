@@ -1,15 +1,15 @@
-SpaBE Reproducibility
+SpaBEC Reproducibility
 =====================
 
-**SpaBE** is a reproducibility framework that systematically defines and
+**SpaBEC** is a reproducibility framework that systematically defines and
 benchmarks **batch effects in spatial transcriptomics (ST)**.
 
 Spatial transcriptomics enables high-resolution profiling of gene expression
 within tissue slices, but technical and experimental variations introduce
 batch effects that obscure biological signals and complicate data integration.
 This site documents the framework, datasets, methods, and metrics used in our
-study *"Towards a Better Understanding of Batch Effects in Spatial
-Transcriptomics: Definition and Method Evaluation"*.
+study *"A systematic framework for defining and evaluating batch
+correction in spatial transcriptomics"*.
 
 We categorize batch effects in ST into four types:
 
@@ -26,7 +26,7 @@ metrics that capture both batch-effect removal and biological signal preservatio
 .. note::
 
    This project is under active development. The reproducibility code lives
-   in the ``code/`` directory of the SpaBE repository.
+   in the ``code/`` directory of the SpaBEC repository.
 
 Contents
 --------
