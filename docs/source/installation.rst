@@ -1,7 +1,7 @@
 Installation
 ============
 
-The SpaBE benchmark reproduces seven spatial transcriptomics integration
+The **SpaBEC** benchmark reproduces seven spatial transcriptomics integration
 methods and ten evaluation metrics. Because the seven methods have
 mutually incompatible Python/R environments, we recommend creating one
 :command:`conda` environment **per method**.
@@ -26,8 +26,8 @@ Clone the repository
 
 .. code-block:: console
 
-   $ git clone https://github.com/your-org/SpaBE.git
-   $ cd SpaBE
+   $ git clone https://github.com/sduhoulab/SpaBEC.git
+   $ cd SpaBEC
 
 The reproducibility scripts live under ``code/``:
 
