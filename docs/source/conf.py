@@ -2,7 +2,7 @@
 
 # -- Project information
 
-project = 'SpaBEC'
+project = 'SpaBEAT'
 copyright = '2026, Shandong University'
 author = 'Qingzhen Hou'
 

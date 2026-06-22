@@ -1,7 +1,7 @@
-SpaBEC Reproducibility
+SpaBEAT Reproducibility
 =====================
 
-**SpaBEC** is a reproducibility framework that systematically defines and
+**SpaBEAT** is a reproducibility framework that systematically defines and
 benchmarks **batch effects in spatial transcriptomics (ST)**.
 
 Spatial transcriptomics enables high-resolution profiling of gene expression

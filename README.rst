@@ -1,7 +1,7 @@
-SpaBEC (Spatial Batch Effect Correction benchmark）
+SpaBEAT (Spatial Batch Effect Assessment and Testing）
 ================================================
 
-**SpaBE** is a reproducibility framework that systematically defines and
+**SpaBEAT** is a reproducibility framework that systematically defines and
 benchmarks batch effects in spatial transcriptomics (ST).
 
 We categorize ST batch effects into four types (inter-slice, inter-sample,
