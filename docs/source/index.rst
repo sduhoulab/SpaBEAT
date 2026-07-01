@@ -42,6 +42,7 @@ Contents
    installation
    datasets
    annotations
+   preprocessing
 
 .. toctree::
    :maxdepth: 2
