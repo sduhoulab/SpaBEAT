@@ -23,14 +23,14 @@ We categorize batch effects in ST into four types:
    technologies (10x Visium, Stereo-seq, Slide-seqV2, etc.).
 4. **Intra-slice** — batch effects within a single slice.
 
-We use this framework to evaluate seven representative batch-correction /
+We use this framework to evaluate ten representative batch-correction /
 integration methods across human and mouse datasets, scoring each with ten
 metrics that capture both batch-effect removal and biological signal preservation.
 
 .. note::
 
    This project is under active development. The reproducibility code lives
-   in the ``code/`` directory of the SpaBEAT repository.
+   in the ``code/`` directory of the [SpaBEAT](https://github.com/sduhoulab/SpaBEAT) repository.
 
 Contents
 --------
@@ -41,6 +41,7 @@ Contents
 
    installation
    datasets
+   annotations
 
 .. toctree::
    :maxdepth: 2

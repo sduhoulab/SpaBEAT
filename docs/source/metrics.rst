@@ -33,12 +33,8 @@ These metrics are higher when batches are well mixed in the embedding.
      - [0, 1]
      - Fraction of cells of the same biological label connected in a kNN
        graph built on the integrated embedding.
-   * - PCR comparison
-     - [0, 1]
-     - Drop in variance explained by batch (principal component
-       regression) before vs. after integration.
 
-Biological signal preservation
+Spatial structure preservation
 ------------------------------
 
 These metrics are higher when known biology (manual annotations or
@@ -51,22 +47,25 @@ clusters) is preserved.
    * - Metric
      - Range
      - Description
+   * - SCS
+     - [-∞,+∞]
+     - Quantifies the spatial coherence of biological signals by measuring how consistently similar expression patterns are preserved among neighboring spots.
+   * - Moran’s I
+     - [-1, 1]
+     - Measures the global spatial autocorrelation of gene expression, indicating whether similar expression values are spatially clustered.
+   * - Geary’s C
+     - [-1, 1]
+     - Quantifies the spatial coherence of biological signals by measuring how consistently similar expression patterns are preserved among neighboring spots
    * - ARI
      - [-1, 1]
      - Adjusted Rand Index between Leiden / mclust clusters and manual
        layer annotations.
-   * - NMI
-     - [0, 1]
-     - Normalized mutual information against manual annotations.
    * - cLISI
      - [1, C]
      - Cell-type LISI; lower = better preservation of cell-type identity.
    * - Cell-type ASW
      - [-1, 1]
      - Silhouette of biological labels in the integrated embedding.
-   * - Isolated label F1
-     - [0, 1]
-     - F1 score for rare / isolated cell types in the embedding.
 
 Running the metrics
 -------------------
@@ -84,7 +83,7 @@ The main entry point is:
 
 Additional helpers:
 
-* ``spatial_metrics.py`` — adds spatially-aware variants of ARI/NMI.
+* ``spatial_metrics.py`` — adds spatially-aware variants of ARI.
 * ``four metrcis.py`` — runs the four headline metrics in one shot.
 * ``time_memory.py`` — records runtime and peak RAM for each method.
 * ``rank_metrics_plot.py`` — produces the radar / rank plots shown in
