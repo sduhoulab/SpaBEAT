@@ -8,8 +8,6 @@ SpaBEAT
 **SpaBEAT** is a reproducibility framework that systematically defines and
 benchmarks **batch effects in spatial transcriptomics (ST)**.
 
-.. image:: assets/4_scenario.png
-
 Spatial transcriptomics enables high-resolution profiling of gene expression
 within tissue slices, but technical and experimental variations introduce
 batch effects that obscure biological signals and complicate data integration.
