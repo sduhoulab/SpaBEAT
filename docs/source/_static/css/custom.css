@@ -1,0 +1,12 @@
+/* Force text wrapping in tables for sphinx_rtd_theme */
+.wy-table-responsive table td,
+.wy-table-responsive table th {
+    white-space: normal !important;
+    word-break: break-word;     /* Optional: break long words */
+    hyphens: auto;              /* Optional: better hyphenation */
+}
+
+/* Optional: make tables more responsive */
+.wy-table-responsive {
+    overflow: auto;
+}

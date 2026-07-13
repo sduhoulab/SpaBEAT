@@ -1,4 +1,4 @@
-SpaBEAT (Spatial Batch Effect Assessment and Testing）
+SpaBEAT (Spatial Batch Effect Assessment and Testing)
 ================================================
 
 **SpaBEAT** is a reproducibility framework that systematically defines and

@@ -32,8 +32,12 @@ exclude_patterns = []
 
 html_theme = 'sphinx_rtd_theme'
 html_static_path = ['_static']
-html_title = 'SpaBEAT Reproducibility'
-html_short_title = 'SpaBE'
+# Add your custom CSS
+html_css_files = [
+    'css/custom.css',
+]
+html_title = 'SpaBEAT (Spatial Batch Effect Assessment and Testing)'
+html_short_title = 'SpaBEAT'
 
 html_theme_options = {
     'navigation_depth': 3,
