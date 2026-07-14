@@ -4,6 +4,21 @@ Data and code availability
 SpaBEAT benchmarks fourteen spatial transcriptomics datasets that span the
 batch-effect categories introduced on the :doc:`home page <index>`.
 
+Datasets Summary
+----------------
+
+
+.. csv-table:: Datasets Summary
+   :header: "Dataset", "Application Scenario", "Data Link (Converted)"
+   :widths: 30, 30, 40
+   :align: center
+
+   "HER2+ breast tumor (ST) ", "Inter-slice, Non-Consecutive; Inter-slice, Consecutive; Inter-sample, Different-Samples", "https://doi.org/10.5281/zenodo.21318241"
+   "Visium ST mouse brain (slice_39 / slice_44)", "Inter-slice, Consecutive Slices", "https://doi.org/10.5281/zenodo.21319528"
+    "MERFISH mouse hypothalamus (Slice_7–Slice_11)", "Inter-slice, Consecutive Slices", "https://doi.org/10.5281/zenodo.21319752"
+
+
+
 
 Real Datasets
 -------------
@@ -304,8 +319,7 @@ profiled with Xenium (labelled ``Rep1_outs`` and ``Rep2_outs``).
    * - **Domain/cell type count**
      - 20
    * - **Application scenarios**
-     -
-      - Definition 1 — Inter-slice, Consecutive
+     - Definition 1 — Inter-slice, Consecutive
    * - **Reference**
      - High resolution mapping of the tumor microenvironment using integrated single-cell, spatial and in situ analysis.
    * - **Data link (RAW)**
@@ -347,12 +361,13 @@ specimen was analysed using both the Visium HD and Xenium 5K platforms.
    * - **Domain/cell type count**
      - 17
    * - **Application scenarios**
-     -
-      - Definition 3 — Cross-platform
+     - Definition 3 — Cross-platform
    * - **Reference**
      - Systematic benchmarking of high-throughput subcellular spatial transcriptomics platforms across human tumors.
    * - **Data link (RAW)**
      - http://spatch.pku-genomics.org/
+   * - **Data link (Converted)**
+     - 
 
 Spatch human OV (Visium HD + Xenium 5K)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
