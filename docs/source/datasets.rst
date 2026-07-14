@@ -60,7 +60,7 @@ sections per tumor (total n = 36 sections). Section sizes range from
      - | https://github.com/almaan/HER2st/
        | https://doi.org/10.5281/zenodo.21318241
    * - **Data link (Converted)**
-     - 
+     - https://doi.org/10.5281/zenodo.21357108
        
 
 Visium ST mouse brain (slice_39 / slice_44)
@@ -370,7 +370,7 @@ specimen was analysed using both the Visium HD and Xenium 5K platforms.
    * - **Data link (RAW)**
      - http://spatch.pku-genomics.org/
    * - **Data link (Converted)**
-     - 
+     - https://doi.org/10.5281/zenodo.21349595
 
 Spatch human OV (Visium HD + Xenium 5K)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -411,6 +411,8 @@ using both the Visium HD and Xenium 5K platforms.
      - Systematic benchmarking of high-throughput subcellular spatial transcriptomics platforms across human tumors.
    * - **Data link (RAW)**
      - http://spatch.pku-genomics.org/
+   * - **Data link (Converted)**
+     -  https://doi.org/10.5281/zenodo.21351581
 
 
 Simulated Datasets
@@ -502,8 +504,7 @@ no gradient.
    * - **Domain/cell type count**
      - 9 domains
    * - **Application scenarios**
-     -
-      - Definition 3 — Cross-platform
+     - Definition 3 — Cross-platform
 
 Spatch OV (simulated pseudo-Visium)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -525,8 +526,7 @@ paired slices.
    * - **Domain/cell type count**
      - 13 domains
    * - **Application scenarios**
-     -
-      - Definition 3 — Cross-platform
+     - Definition 3 — Cross-platform
 
 
 Recommended layout
