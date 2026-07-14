@@ -1,4 +1,4 @@
-Data and code availability
+Datasets Availability
 ==========================
 
 SpaBEAT benchmarks fourteen spatial transcriptomics datasets that span the
@@ -324,6 +324,9 @@ profiled with Xenium (labelled ``Rep1_outs`` and ``Rep2_outs``).
      - High resolution mapping of the tumor microenvironment using integrated single-cell, spatial and in situ analysis.
    * - **Data link (RAW)**
      - https://www.10xgenomics.com/products/xenium-in-situ/preview-dataset-human-breast
+   * - **Data link (Converted)**
+     - https://doi.org/10.5281/zenodo.21349247
+     
 
 Spatch human HCC (Visium HD + Xenium 5K)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

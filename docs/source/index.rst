@@ -37,16 +37,14 @@ Contents
 
 .. toctree::
    :maxdepth: 2
-   :caption: Getting Started
+   :caption: 1. Datasets and Preprocessing 
 
-   installation
    datasets
-   annotations
    preprocessing
 
 .. toctree::
    :maxdepth: 2
-   :caption: Batch-Removal Methods
+   :caption: 2. Method Execution
 
    methods/graphst
    methods/deepst
@@ -61,14 +59,37 @@ Contents
 
 .. toctree::
    :maxdepth: 2
-   :caption: Benchmark
+   :caption: 3. Metric Calculation
 
-   metrics
-   reproducibility
-   results
+   metric_calculation
 
 .. toctree::
-   :maxdepth: 1
-   :caption: About
+   :maxdepth: 2
+   :caption: 4. Ranking and Coverage
 
-   citation
+   ranking_coverage
+
+.. toctree::
+   :maxdepth: 2
+   :caption: 5. Simulations
+
+   simulations
+
+.. toctree::
+   :maxdepth: 2
+   :caption: 6. Robustness Analyses
+
+   robustness_analyses
+
+.. toctree::
+   :maxdepth: 2
+   :caption: 7. Downstream Analyses
+
+   downstream_analyses
+
+.. toctree::
+   :maxdepth: 2
+   :caption: 8. Figure Reproduction
+
+   figure_reproduction
+
