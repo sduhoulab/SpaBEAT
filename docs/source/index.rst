@@ -46,7 +46,7 @@ Contents
 
 .. toctree::
    :maxdepth: 2
-   :caption: Integration Methods
+   :caption: Batch-Removal Methods
 
    methods/graphst
    methods/deepst
