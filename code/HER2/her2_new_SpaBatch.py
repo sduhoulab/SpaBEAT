@@ -1,0 +1,199 @@
+import sys
+sys.path.append("/root/ST0507/new_model/SpaBatch-main")
+
+import os
+import torch
+import time
+import psutil
+import gc
+import json
+import numpy as np
+import pandas as pd
+import scanpy as sc
+import argparse
+from pathlib import Path
+from tqdm import tqdm
+import matplotlib.pyplot as plt
+
+from SpaBatch.adj import main, combine_graph_dict
+from SpaBatch.train import train_model
+from SpaBatch.utils import mclust_R, fix_seed
+from sklearn.decomposition import PCA
+
+# ====================== BenchmarkTracker ======================
+class BenchmarkTracker:
+    def __init__(self, method_name):
+        self.method_name = method_name
+        self.process = psutil.Process(os.getpid())
+
+    def __enter__(self):
+        gc.collect()
+        if torch.cuda.is_available():
+            torch.cuda.empty_cache()
+            torch.cuda.reset_peak_memory_stats()
+        self.mem_before = self.process.memory_info().rss / (1024 * 1024)
+        self.start_time = time.time()
+        print(f"\n[{self.method_name}] Starting core training benchmark...")
+        return self
+
+    def __exit__(self, exc_type, exc_val, exc_tb):
+        self.train_time = time.time() - self.start_time
+        self.mem_used = (self.process.memory_info().rss / (1024 * 1024)) - self.mem_before
+        self.gpu_mem = torch.cuda.max_memory_allocated() / (1024*1024) if torch.cuda.is_available() else 0
+        print(f"Time: {self.train_time:.2f}s | CPU RAM: {self.mem_used:.2f}MB | GPU Peak: {self.gpu_mem:.2f}MB\n")
+
+    def save_report(self, json_path, adata, embed_key, extra_meta={}):
+        results = {
+            'method_name': self.method_name,
+            'training_time_seconds': self.train_time,
+            'memory_usage_mb': self.mem_used,
+            'gpu_peak_memory_mb': self.gpu_mem,
+            'total_cells': adata.n_obs,
+            'timestamp': pd.Timestamp.now().isoformat()
+        }
+        results.update(extra_meta)
+        os.makedirs(os.path.dirname(json_path), exist_ok=True)
+        with open(json_path, "w") as f:
+            json.dump(results, f, indent=2)
+
+fix_seed(42)
+
+# ======================================================================
+# Task Configuration Switch
+# ======================================================================
+TASKS = {
+    'her2_A': {'root': '/root/ST0507/data/Her2_tumor_converted/A/', 'slices': ['A1', 'A2', 'A3', 'A4', 'A5', 'A6'], 'n_domains': 5, 'type': 'her2_A', 'suffix': 'A'},
+    'her2_B': {'root': '/root/ST0507/data/Her2_tumor_converted/B/', 'slices': ['B1', 'B2', 'B3', 'B4', 'B5', 'B6'], 'n_domains': 5, 'type': 'her2_B', 'suffix': 'B'},
+    'her2_C': {'root': '/root/ST0507/data/Her2_tumor_converted/C/', 'slices': ['C1', 'C2', 'C3', 'C4', 'C5', 'C6'], 'n_domains': 5, 'type': 'her2_C', 'suffix': 'C'},
+    'her2_D': {'root': '/root/ST0507/data/Her2_tumor_converted/D/', 'slices': ['D1', 'D2', 'D3', 'D4', 'D5', 'D6'], 'n_domains': 5, 'type': 'her2_D', 'suffix': 'D'},
+    'her2_E': {'root': '/root/ST0507/data/Her2_tumor_converted/E/', 'slices': ['E1', 'E2', 'E3'], 'n_domains': 5, 'type': 'her2_E', 'suffix': 'E'},
+    'her2_F': {'root': '/root/ST0507/data/Her2_tumor_converted/F/', 'slices': ['F1', 'F2', 'F3'], 'n_domains': 5, 'type': 'her2_F', 'suffix': 'F'},
+    'her2_G': {'root': '/root/ST0507/data/Her2_tumor_converted/G/', 'slices': ['G1', 'G2', 'G3'], 'n_domains': 5, 'type': 'her2_G', 'suffix': 'G'},
+    'her2_H': {'root': '/root/ST0507/data/Her2_tumor_converted/H/', 'slices': ['H1', 'H2', 'H3'], 'n_domains': 5, 'type': 'her2_H', 'suffix': 'H'},
+    'her2_sample': {'root': '/root/ST0507/data/Her2_tumor_converted/', 'slices': ['A/A1', 'B/B1', 'C/C1', 'D/D1', 'E/E1', 'F/F1', 'G/G2', 'H/H1'], 'n_domains': 5, 'type': 'her2_sample', 'suffix': 'sample'}
+}
+
+# ======================================================================
+# Argument Parsing Setup
+# ======================================================================
+parser = argparse.ArgumentParser(description="Run SpaBatch Benchmark for a specific task.")
+parser.add_argument(
+    '--task',
+    type=str,
+    required=True,
+    choices=list(TASKS.keys()),
+    help="Specify the task to run. Available tasks: " + ", ".join(TASKS.keys())
+)
+parser.add_argument('--n_domains', type=int, default=None, help='Number of domains for clustering')
+
+args_cli = parser.parse_args()
+CURRENT_TASK = args_cli.task
+config = TASKS[CURRENT_TASK]
+
+final_n_domains = args_cli.n_domains if args_cli.n_domains is not None else config['n_domains']
+
+
+# ======================================================================
+
+data_root = Path(config['root'])
+proj_list = config['slices']
+save_path = Path('/root/ST0507/new_model/SpaBatch-main/Results')
+save_path.mkdir(parents=True, exist_ok=True)
+
+print(f"=== Running SpaBatch Benchmark for: {CURRENT_TASK} (n_domains = {final_n_domains}) ===")
+
+
+# 1. Automatically load and concatenate datasets
+print("Loading data, building graphs, and concatenating...")
+for i, proj_name in enumerate(tqdm(proj_list)):
+    batch_name = proj_name.split('/')[-1] 
+    
+    file_path = data_root / proj_name / f"{batch_name}.h5ad"
+    metadata_file = data_root / proj_name / 'metadata.csv'
+    
+    adata_tmp = sc.read_h5ad(file_path)
+    adata_tmp.var_names_make_unique()
+    adata_tmp.obs['batch_name'] = batch_name
+
+    # ==========================================
+    if 'ground_truth' not in adata_tmp.obs.columns:
+        if metadata_file.exists():
+            print(f"\n[Info] No ground_truth found in {proj_name}, loading from metadata.csv...")
+            df_meta = pd.read_csv(metadata_file, index_col=0)
+            
+            possible_cols = ['ground_truth', 'layer_guess', 'celltype', 'Ground Truth', 'label']
+            for col in possible_cols:
+                if col in df_meta.columns:
+                    adata_tmp.obs['ground_truth'] = adata_tmp.obs_names.map(df_meta[col])
+                    print(f"  [✔] Successfully loaded labels from column: '{col}'")
+                    break
+            else:
+                print(f"  [Warning] metadata.csv found but no valid label columns detected for {proj_name}!")
+        else:
+            print(f"  [Error] No labels in adata and metadata.csv not found for {proj_name}!")
+    else:
+        adata_tmp.obs['ground_truth'] = adata_tmp.obs['ground_truth'].astype('category')
+
+    # Remove NA background spots immediately after getting labels
+    adata_tmp = adata_tmp[~pd.isnull(adata_tmp.obs['ground_truth'])].copy()
+
+    # Construct spatial graph using cleaned adata
+    graph_dict_tmp = main(adata_tmp, adj_cons_by='coordinate', distType='KNN', k_cutoff=12, rad_cutoff=250)
+
+    # Merge datasets
+    if proj_name == proj_list[0]:
+        adata = adata_tmp
+        graph_dict = graph_dict_tmp
+    else:
+        var_names = adata.var_names.intersection(adata_tmp.var_names)
+        adata_tmp = adata_tmp[:, var_names]
+        var_names = adata.var_names.intersection(adata_tmp.var_names)
+        adata = adata[:, var_names].copy()         # 加上 .copy()
+        adata_tmp = adata_tmp[:, var_names].copy() # 加上 .copy()
+        adata = adata.concatenate(adata_tmp, batch_key="concat_batch")
+        graph_dict = combine_graph_dict(graph_dict, graph_dict_tmp)
+
+# 2. Preprocessing
+adata.layers['count'] = adata.X.toarray()
+sc.pp.highly_variable_genes(adata, flavor="seurat_v3", layer='count', n_top_genes=5000)
+sc.pp.normalize_total(adata, target_sum=1e4)
+sc.pp.log1p(adata)
+adata = adata[:, adata.var['highly_variable'] == True]
+adata.raw = adata.copy()
+sc.pp.scale(adata)
+adata.obsm['X_pca'] = PCA(n_components=200, random_state=42).fit_transform(adata.X)
+
+# 3. Benchmark training
+with BenchmarkTracker('SpaBatch') as tracker:
+    SpaBatch_net = train_model(adata, graph_dict, pre_epochs=500, epochs=1000, mask_rate=0.2)
+    SpaBatch_net.train_with_dec(num_aggre=1)
+    SpaBatch_feat, q = SpaBatch_net.process()
+
+if not (np.isnan(SpaBatch_feat).any() or np.isinf(SpaBatch_feat).any()):
+    adata.obsm['SpaBatch_embed'] = np.ascontiguousarray(SpaBatch_feat, dtype=np.float64)
+
+if 'SpaBatch_embed' in adata.obsm:
+    try:
+        print(f"Clustering with mclust (n_domains = {final_n_domains})...")
+        mclust_R(adata, num_cluster=final_n_domains, used_obsm='SpaBatch_embed')
+    except Exception as e:
+        print(f"Mclust Error: {e}")
+
+# Assign ground truth to celltype for benchmark metrics
+if 'ground_truth' in adata.obs:
+    adata.obs['celltype'] = adata.obs['ground_truth'].astype('category')
+else:
+    print("[Warning] ground_truth column not found, biological metrics may fail!")
+
+# ======================================================================
+# 4. Save results
+# ======================================================================
+tracker.save_report(
+    json_path=save_path / f"spabatch_benchmark_{config['suffix']}.json",
+    adata=adata,
+    embed_key='SpaBatch_embed',
+    extra_meta={'n_datasets': len(proj_list)}
+)
+
+adata.write(save_path / f"multiple_adata_{config['suffix']}_spabatch.h5ad")
+print(f"Successfully finished {CURRENT_TASK} and saved to {save_path}/multiple_adata_{config['suffix']}_spabatch.h5ad")
