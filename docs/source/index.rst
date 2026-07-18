@@ -71,21 +71,21 @@ Contents
 
 .. toctree::
    :maxdepth: 2
-   :caption: 5. Simulations
+   :caption: 5. Computational efficiency
+
+   computational_efficiency
+
+.. toctree::
+   :maxdepth: 2
+   :caption: 6. Controlled simulations
 
    simulations
 
 .. toctree::
    :maxdepth: 2
-   :caption: 6. Robustness Analyses
+   :caption: 7. Robustness
 
-   robustness_analyses
-
-.. toctree::
-   :maxdepth: 2
-   :caption: 7. Downstream Analyses
-
-   downstream_analyses
+   robustness
 
 .. toctree::
    :maxdepth: 2

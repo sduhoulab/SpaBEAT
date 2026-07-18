@@ -1,4 +1,4 @@
-Evaluation metrics
+Metric implementation
 ==================
 
 This section describes the complete workflow for computing ten spatial transcriptomics benchmark metrics, embedding configurations of all compared methods, and standardized error handling strategies. Script ‘spatial_metrics.py’ contains core metric functions, while the ‘metrics_benchmark.py’ serve as the main executor for batch metric computation. In total, ten evaluation metrics are divided into biological preservation metrics (SCS, Moran’s I, Geary’s C, cLISI, ASW_domain, ARI) and batch correction metrics (GC, iLISI, kBET, ASW_batch).
