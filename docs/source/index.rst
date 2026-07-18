@@ -89,7 +89,12 @@ Contents
 
 .. toctree::
    :maxdepth: 2
-   :caption: 8. Figure Reproduction
+   :caption: 8. Downstream analyses
 
-   figure_reproduction
+   downstream_analyses
 
+.. toctree::
+   :maxdepth: 2
+   :caption: References
+
+   references

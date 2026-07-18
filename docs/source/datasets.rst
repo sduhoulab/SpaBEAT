@@ -13,15 +13,45 @@ Datasets Summary
    :widths: 30, 30, 40
    :align: center
 
+   "DLPFC", 
    "HER2+ breast tumor (ST) ", "Inter-slice, Non-Consecutive; Inter-slice, Consecutive; Inter-sample, Different-Samples", "https://doi.org/10.5281/zenodo.21318241"
    "Visium ST mouse brain (slice_39 / slice_44)", "Inter-slice, Consecutive Slices", "https://doi.org/10.5281/zenodo.21319528"
-    "MERFISH mouse hypothalamus (Slice_7–Slice_11)", "Inter-slice, Consecutive Slices", "https://doi.org/10.5281/zenodo.21319752"
+   "MERFISH mouse hypothalamus (Slice_7–Slice_11)", "Inter-slice, Consecutive Slices", "https://doi.org/10.5281/zenodo.21319752"
+
 
 
 
 
 Real Datasets
 -------------
+
+DLPFC
+~~~~
+
+The DLPFC dataset includes DLPFC Samples 1–3, comprising 12 slices in total[1]. Raw data including .h5 expression matrices, metadata, and H&E-stained images with manually annotated structural domains, were sourced from the Bioconductor package spatialLIBD. The reference layer annotations were established in the original study based primarily on cytoarchitectural features of human DLPFC tissue sections, with t-SNE transcriptomic clusters and spatial profiles of layer-specific marker genes used for auxiliary calibration. Each spot was manually annotated into one of seven anatomical domains (L1–L6 and WM). Additionally, for STitch3D, we integrated external single-cell reference datasets (GSE144136) in .mtx format, supplemented by corresponding cell barcode metadata (.csv) and spatial spot-to-barcode mapping files (.tsv).
+
+**Evaluation Scenarios**: 
+
+Definition 1 (Inter-slice, non-consecutive): slices A, B, C, and D from each of the three samples; 
+
+Definition 1 (Inter-slice, consecutive): slices 151673 and 151674 from Sample 1;
+
+Definition 2 (Inter-sample): one representative slice from each of the three biological samples was integrated (151673, 151669, and 151507).
+
+**Download Link: (Converted)** `https://doi.org/10.5281/zenodo.21362875 <https://doi.org/10.5281/zenodo.21362875>`_
+
+
+HBC 
+~~~~
+
+Encompasses two non-consecutive slices (Section 1 and Section 2). Raw data including .h5 expression matrices, metadata, and H&E-stained images were from the 10x Genomics library. Available manual/domain annotations were used as reference labels for biological-preservation evaluation.
+
+**Evaluation Scenarios**: 
+
+Definition 1 (Inter-slice, non-consecutive)
+
+**Download Link: (Converted)** `https://doi.org/10.5281/zenodo.21426542 <https://doi.org/10.5281/zenodo.21426542>`_
+
 
 HER2+ breast tumor (ST)
 ~~~~~~~~~~~~~~~~~~~~~~~
