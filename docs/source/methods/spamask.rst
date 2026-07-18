@@ -1,6 +1,31 @@
 SpaMask
 =======
 
+Introduction
+----
+SpaMask is a dual-masking graph autoencoder with contrastive learning dedicated to spatial transcriptomics clustering and multi-slice integration, composed of two parallel shared-weight GNN branches: Masked Graph Autoencoder (MGAE) and Masked Graph Contrastive Learning (MGCL). The MGAE branch performs node masking on gene expression features and uses GCN decoder and scaled cosine error loss to reconstruct masked spot information by aggregating spatial neighbors. The MGCL branch implements edge masking on spatial adjacency graphs, constructing positive/negative edge pairs and edge-based NCE contrastive loss to tighten embeddings of spatially adjacent spots. The two branches are jointly optimized by weighted total loss. 
+
+Environment configuration
+----
+SpaMask is available at Github (https://github.com/wenwenmin/SpaMask), which provides guidelines for installation. To ensure optimal computational efficiency, the package was executed on a GPU-accelerated environment, although it remains compatible with CPU-based execution.
+
+Input data
+----
+Raw gene expression matrix, spatial coordinates, and reference annotations (e.g., spatial ground truth labels or cell types).
+
+
+Unique preprocessing and parameter configuration
+----
+Strictly comply with unified preprocessing standard (HVG filtering, 1e4 normalization, log transform, stratified subsampling for high-resolution samples), without additional operations. Parameter configuration follows default settings.
+
+Output results
+----
+Batch-corrected unified latent embeddings and spatial domain clustering results (derived via mclust). 
+
+
+Installation
+------------
+
 `SpaMask <https://github.com/JinmiaoChenLab/SpaMask>`_ is a
 masking-based self-supervised framework for spatial transcriptomics.
 It learns spot embeddings by reconstructing randomly masked gene
@@ -8,8 +33,6 @@ expression and graph edges over the spatial neighborhood graph,
 yielding representations that are robust to batch effects between
 slices.
 
-Installation
-------------
 
 .. code-block:: console
 

@@ -1,14 +1,35 @@
 SpaCross
 ========
 
+Introduction
+----
+SpaCross proposes cross-masked graph autoencoder to build two complementary feature views, and a Cross-Masked Latent Consistency (CML) module to impose implicit latent space supervision across dual masked views. Its core innovation is the adaptive hybrid spatial-semantic graph (AHSG), which fuses local spatial neighbors and global semantically similar spots to balance spatial continuity and inter-domain semantic consistency, paired with contrastive aggregation loss to eliminate technical batch noise. 
+
+Environment configuration
+----
+SpaCross is available at Github (https://github.com/wenwenmin/SpaCross). To ensure optimal computational efficiency, the package was executed on a GPU-accelerated environment, although it remains compatible with CPU-based execution.
+
+Input data
+----
+Raw gene expression matrix, spatial coordinates, dataset-specific YAML configuration files, and reference annotations (e.g., spatial ground truth labels or cell types).
+
+Unique preprocessing and parameter configuration
+----
+Strictly comply with unified preprocessing standard (HVG filtering, 1e4 normalization, log transform, stratified subsampling for high-resolution samples), without additional operations. For datasets with corresponding YAML configuration files, the original settings were retained; otherwise, the DLPFC configuration was applied as the default.
+
+Output results
+----
+`enc_rep, recon = net.process()`. Batch-corrected unified latent embeddings and spatial domain clustering results (derived via mclust).
+
+
+Installation
+------------
+
 `SpaCross <https://github.com/zhanglabtools/SpaCross>`_ integrates
 spatial transcriptomics slices via a cross-attention graph neural
 network. It models cross-slice spot correspondences alongside the
 intra-slice spatial graph, yielding a shared embedding that aligns
 slices across donors, platforms, and protocols.
-
-Installation
-------------
 
 .. code-block:: console
 

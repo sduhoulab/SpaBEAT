@@ -1,15 +1,38 @@
 SpaBatch
 ========
 
+Introduction
+----
+SpaBatch is a variational graph autoencoder (VGAE)-based multi-slice integration tool for 3D spatial domain identification and batch effect removal, applicable to diverse tissues, species and sequencing platforms including MERFISH and Stereo-seq. It adopts a two-stage training pipeline: pre-training via masked VGAE to capture spatial-transcriptional latent features with scaled cosine reconstruction loss and KL regularization; fine-tuning combines Deep Embedded Clustering (DEC) for compact cluster formation and readout-aggregated triplet contrastive loss to correct cross-slice batch effects. The framework constructs block-diagonal multi-slice spatial graphs and supports semi-supervised spatial domain prediction using limited annotated slices. It can denoise gene expression signals to strengthen marker gene spatial patterns.
+
+Environment configuration
+----
+SpaBatch is available at Github (https://github.com/wenwenmin/SpaBatch). To ensure optimal computational efficiency, the package was executed on a GPU-accelerated environment, although it remains compatible with CPU-based execution.
+
+Input data
+----
+Raw gene expression matrix and spatial coordinates, and ground truth annotations (strictly reserved for downstream spatial domain clustering and benchmarking evaluation, rather than model training)
+
+Unique preprocessing and parameter configuration
+----
+Strictly comply with unified preprocessing standard (HVG filtering, 1e4 normalization, log transform, stratified subsampling for high-resolution samples), without additional operations. Parameter configuration follows default settings.
+
+Output results
+----
+`SpaBatch_feat, q = SpaBatch_net.process()`. Batch-corrected unified latent embeddings (stored in the ‘SpaBatch’ fields) and spatial domain clustering results (derived via mclust).
+
+
+
+
+Installation
+------------
+
 `SpaBatch <https://github.com/QSong-github/SpaBatch>`_ is a deep
 learning framework tailored to batch-effect correction in spatial
 transcriptomics. It combines a graph autoencoder over the spatial
 neighborhood graph with an explicit batch-adversarial objective, so the
 learned embedding mixes slices while retaining spatial domain
 structure.
-
-Installation
-------------
 
 .. code-block:: console
 

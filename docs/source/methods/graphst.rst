@@ -1,15 +1,43 @@
 GraphST
 =======
 
+Introduction
+-------------
+GraphST (Self-Supervised Contrastive Learning) 
+
+GraphST introduces the PASTE technique for aligning spatial coordinates to reduce batch effects during horizontal integration. When vertically integrating slices from multiple samples, the method first aligns H&E images and constructs a shared neighborhood graph. Through iterative aggregation of neighbor representations, GraphST smooths feature distributions and mitigates batch differences. A self-supervised contrastive learning strategy is then employed to reinforce spot embeddings, ensuring that spatially neighboring spots exhibit similar representations, further reducing batch effects and preserving spatial structures. 
+
+Environment configuration
+--------------
+The GraphST package was obtained from the official `repository <https://github.com/JinmiaoChenLab/GraphST>`_ and installed following the provided documentation. GraphST integrates Scanpy for spatial data processing with the PyTorch and cuDNN frameworks to execute its core GNN-based contrastive learning modules. To ensure optimal computational efficiency, the package was executed on a GPU-accelerated environment, although it remains compatible with CPU-based execution.
+
+
+Input data
+----
+
+Raw gene expression matrix, spatial coordinates, and reference annotations (e.g., spatial ground truth labels or cell types).
+
+Unique preprocessing and parameter configuration
+----
+Adopt unified baseline preprocessing workflow including HVG selection, 1e4 normalization, log transformation and stratified downsampling for high-resolution samples; no extra custom preprocessing operations. Default parameters were used.
+
+Output results
+----
+Batch-corrected unified latent embeddings (stored in the ‘emb’ or ‘emb_pca’ field) and spatial domain clustering results (derived via mclust).
+
+
+
+
+
+Installation
+------------
+
 `GraphST <https://github.com/JinmiaoChenLab/GraphST>`_ is a graph
 self-supervised contrastive learning method for spatial clustering and
 batch integration of ST data.
 
 Reference implementation:
 https://github.com/JinmiaoChenLab/GraphST/tree/main
-
-Installation
-------------
 
 .. code-block:: console
 

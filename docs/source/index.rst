@@ -44,22 +44,22 @@ Contents
 
 .. toctree::
    :maxdepth: 2
-   :caption: 2. Method Execution
+   :caption: 2. Method implementation and applicability
 
-   methods/graphst
-   methods/deepst
-   methods/precast
    methods/staligner
-   methods/spiral
+   methods/graphst
    methods/stitch3d
+   methods/precast
    methods/spatialign
+   methods/deepst
+   methods/spiral
    methods/spabatch
    methods/spacross
    methods/spamask
 
 .. toctree::
    :maxdepth: 2
-   :caption: 3. Metric Calculation
+   :caption: 3. Metric implementation
 
    metric_calculation
 
