@@ -13,13 +13,18 @@ Datasets Summary
    :widths: 30, 30, 40
    :align: center
 
-   "DLPFC", 
+   "DLPFC", "Inter-slice, non-consecutive; Inter-slice, consecutive; Inter-sample", "https://doi.org/10.5281/zenodo.21362875"
+   "HBC", "Inter-slice, non-consecutive", "https://doi.org/10.5281/zenodo.21426542"
    "HER2+ breast tumor (ST) ", "Inter-slice, Non-Consecutive; Inter-slice, Consecutive; Inter-sample, Different-Samples", "https://doi.org/10.5281/zenodo.21318241"
    "Visium ST mouse brain (slice_39 / slice_44)", "Inter-slice, Consecutive Slices", "https://doi.org/10.5281/zenodo.21319528"
    "MERFISH mouse hypothalamus (Slice_7–Slice_11)", "Inter-slice, Consecutive Slices", "https://doi.org/10.5281/zenodo.21319752"
-
-
-
+   "STARmap mouse brain (10 slices)", "Inter-slice, Consecutive Slices", "https://doi.org/10.5281/zenodo.21319822"
+   "Stereo-seq mouse embryo E16.5 (Slice_5–Slice_9)", "Inter-slice, Consecutive Slices", "https://doi.org/10.5281/zenodo.21319948"
+   "STARmap PLUS mouse mPFC (BZ5 / BZ9 / BZ14)", "Inter-sample, Different-Samples", "https://doi.org/10.5281/zenodo.21320238"
+   "Human CRC Visium HD", "Inter-sample, Different-Samples", "https://doi.org/10.5281/zenodo.21320852"
+   "Xenium human HER2+ breast cancer (Rep1 / Rep2)", "Inter-slice, Consecutive", "https://doi.org/10.5281/zenodo.21349247"
+   "Spatch human HCC (Visium HD + Xenium 5K)", "Cross-platform", "https://doi.org/10.5281/zenodo.21349595"
+   "Spatch human OV (Visium HD + Xenium 5K)", "Cross-platform", "https://doi.org/10.5281/zenodo.21351581"
 
 
 Real Datasets
