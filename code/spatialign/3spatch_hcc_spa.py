@@ -1,3 +1,8 @@
+# SpaBEAT
+# Copyright (c) 2026 Shandong University
+# Licensed under the MIT License. See the LICENSE file in the project
+# root for the full license text.
+
 import scanpy as sc
 import pandas as pd
 import os

@@ -1,3 +1,8 @@
+# SpaBEAT
+# Copyright (c) 2026 Shandong University
+# Licensed under the MIT License. See the LICENSE file in the project
+# root for the full license text.
+
 import sys
 # 确保填入你自己的 Spatialign 路径
 sys.path.append('/root/BE/Spatialign/spatialign')

@@ -1,3 +1,8 @@
+# SpaBEAT
+# Copyright (c) 2026 Shandong University
+# Licensed under the MIT License. See the LICENSE file in the project
+# root for the full license text.
+
 # =====================================================================
 # Xenium单细胞原位成像矩阵定制版 STitch3D 算法脚本 (坐标槽位补齐版)
 # 文件名：xenium_stitch3d.py
