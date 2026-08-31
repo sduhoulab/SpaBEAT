@@ -3,7 +3,7 @@ SpaBEAT (Spatial Batch Effect Assessment and Testing)
 
 .. note::
 
-   This documentation corresponds to the revised manuscript.
+   This project is released under the MIT License.
 
 **SpaBEAT** is a reproducibility framework that systematically defines and
 benchmarks **batch effects in spatial transcriptomics (ST)**.
