@@ -25,6 +25,9 @@ Datasets Summary
    "Xenium human HER2+ breast cancer (Rep1 / Rep2)", "Inter-slice, Consecutive", "https://doi.org/10.5281/zenodo.21349247"
    "Spatch human HCC (Visium HD + Xenium 5K)", "Cross-platform", "https://doi.org/10.5281/zenodo.21349595"
    "Spatch human OV (Visium HD + Xenium 5K)", "Cross-platform", "https://doi.org/10.5281/zenodo.21351581"
+   "Coronal", "Cross-protocol", ""
+    "MOB", "Cross-platform", ""
+    "Xenium breast2", "Cell segmentation", ""
 
 
 Real Datasets
@@ -448,6 +451,34 @@ using both the Visium HD and Xenium 5K platforms.
      - http://spatch.pku-genomics.org/
    * - **Data link (Converted)**
      -  https://doi.org/10.5281/zenodo.21351581
+
+
+Coronal
+~~~~~~
+
+Includes data from three distinct tissue preparation protocols (FFPE, DAPI, and Normal). This dataset comprises sample sizes ranging from 91 to 2,903 spots per slice, with 19,465 to 32,285 genes detected. In this set, tissue sections were meticulously annotated into 12 structurally distinct brain anatomical regions and cell types (domains=12), including L6b, Excitatory neuron, L2/3, L5/6, L4, Inhibitory neuron, Hippocampus, CA3, Astrocyte, Oligodendrocyte, CA1/2, and DG, to benchmark spatial domain preservation. Data quality control and feature reconstruction utilized the standardized DLPFC pipeline.
+
+MOB
+~~~~
+
+Integrates slices from 10x Visium, Stereo-seq/BGI, and Slide-seq V2 heterogeneous platforms. This cross-platform dataset comprises sample sizes ranging from 1,185 to 18,537 spots per slice, with a consensus of 5,531 genes consistently detected across all platforms. Tissue sections were annotated into 8 distinct anatomical layers (domains=8), including SEZ, Meninges, OPL, GL, GCL, EPL, ONL, and MCL, to benchmark robust spatial alignment across varying capture resolutions. Data quality control, alignment logic, and feature reconstruction stringently matched the standardized DLPFC pipeline.
+
+**Evaluation Scenarios**: 
+
+Definition 3 :cross-platform.
+
+**Download Link:** (Converted) ``_
+
+Xenium_breast2
+~~~~~~~~~
+
+The Xenium breast cancer dataset was obtained from the 10x Genomics public data repository and comprises Xenium In Situ Gene Expression data from 12 human breast tissue sections, including normal and breast cancer specimens. The dataset was generated using a fully custom 280-gene panel containing breast cancer biomarkers, myoepithelial and basement membrane markers, and 45 housekeeping genes. The tissue sections were prepared from FFPE specimens, and the data were processed using Xenium Onboard Analysis v4.0.0. The dataset provides subcellular-resolution spatial transcriptomic profiles for downstream cell-type identification and spatial analysis.
+
+**Evaluation Scenarios**: 
+
+Definition 3 :cross-platform.
+
+**Download Link:** (Converted) ``_
 
 
 Simulated Datasets
