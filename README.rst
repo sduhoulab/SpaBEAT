@@ -37,3 +37,7 @@ The ``code/`` directory contains one subfolder per benchmarked method
 plus a ``comparison/`` folder with the metric, UMAP, ranking and
 plotting scripts. See ``docs/source/reproducibility.rst`` for the
 end-to-end pipeline.
+
+License
+--------------------
+SpaBEAT is released under the MIT License. See the LICENSE file for details.
