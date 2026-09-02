@@ -25,9 +25,10 @@ Datasets Summary
    "Xenium human HER2+ breast cancer (Rep1 / Rep2)", "Inter-slice, Consecutive", "https://doi.org/10.5281/zenodo.21349247"
    "Spatch human HCC (Visium HD + Xenium 5K)", "Cross-platform", "https://doi.org/10.5281/zenodo.21349595"
    "Spatch human OV (Visium HD + Xenium 5K)", "Cross-platform", "https://doi.org/10.5281/zenodo.21351581"
-   "Coronal", "Cross-protocol", ""
-    "MOB", "Cross-platform", ""
-    "Xenium breast2", "Cell segmentation", ""
+   "Coronal", "Cross-protocol", "https://doi.org/10.5281/zenodo.22225853"
+    "MOB", "Cross-platform", "https://doi.org/10.5281/zenodo.22226692"
+    "Xenium breast2", " ", "https://doi.org/10.5281/zenodo.22226798"
+    "Xenium gene overlap", " ", "https://doi.org/10.5281/zenodo.22227654"
 
 
 Real Datasets
@@ -458,6 +459,9 @@ Coronal
 
 Includes data from three distinct tissue preparation protocols (FFPE, DAPI, and Normal). This dataset comprises sample sizes ranging from 91 to 2,903 spots per slice, with 19,465 to 32,285 genes detected. In this set, tissue sections were meticulously annotated into 12 structurally distinct brain anatomical regions and cell types (domains=12), including L6b, Excitatory neuron, L2/3, L5/6, L4, Inhibitory neuron, Hippocampus, CA3, Astrocyte, Oligodendrocyte, CA1/2, and DG, to benchmark spatial domain preservation. Data quality control and feature reconstruction utilized the standardized DLPFC pipeline.
 
+
+**Download Link:** (Converted) `https://doi.org/10.5281/zenodo.22225853 <https://doi.org/10.5281/zenodo.22225853>`_
+
 MOB
 ~~~~
 
@@ -467,7 +471,7 @@ Integrates slices from 10x Visium, Stereo-seq/BGI, and Slide-seq V2 heterogeneou
 
 Definition 3 :cross-platform.
 
-**Download Link:** (Converted) ``_
+**Download Link:** (Converted) `https://doi.org/10.5281/zenodo.22226692 <https://doi.org/10.5281/zenodo.22226692>`_
 
 Xenium_breast2
 ~~~~~~~~~
@@ -478,7 +482,14 @@ The Xenium breast cancer dataset was obtained from the 10x Genomics public data 
 
 Definition 3 :cross-platform.
 
-**Download Link:** (Converted) ``_
+**Download Link:** (Converted) `https://doi.org/10.5281/zenodo.22226798 <https://doi.org/10.5281/zenodo.22226798>`_
+
+Xenium gene overlap
+~~~~~~~~~
+
+Two consecutive Xenium breast cancer slices were used to simulate differences in targeted gene panels. Starting from 300 shared genes, symmetric cross-masking generated datasets with 250, 200, and 100 shared genes.
+
+**Download Link:** (Converted) `https://doi.org/10.5281/zenodo.22227654 <https://doi.org/10.5281/zenodo.22227654>`_
 
 
 Simulated Datasets
