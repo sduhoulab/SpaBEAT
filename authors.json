@@ -1,0 +1,149 @@
+[
+  {
+    "person_or_org": {
+      "type": "personal",
+      "family_name": "Zhao",
+      "given_name": "Minghui"
+    },
+    "affiliations": [
+      {
+        "name": "Department of Biostatistics, School of Public Health, Cheeloo College of Medicine, Shandong University, Jinan, 250012, Shandong, China"
+      },
+      {
+        "name": "National Institute of Health Data Science of China, Shandong University, Jinan, 250012, Shandong, China"
+      }
+    ]
+  },
+  {
+    "person_or_org": {
+      "type": "personal",
+      "family_name": "Zhang",
+      "given_name": "Yingxin"
+    },
+    "affiliations": [
+      {
+        "name": "Department of Biostatistics, School of Public Health, Cheeloo College of Medicine, Shandong University, Jinan, 250012, Shandong, China"
+      },
+      {
+        "name": "National Institute of Health Data Science of China, Shandong University, Jinan, 250012, Shandong, China"
+      }
+    ]
+  },
+  {
+    "person_or_org": {
+      "type": "personal",
+      "family_name": "Jing",
+      "given_name": "Ming"
+    },
+    "affiliations": [
+      {
+        "name": "School of Data and Computer Science, Shandong Women's University, Jinan, 250300, Shandong, China"
+      }
+    ]
+  },
+  {
+    "person_or_org": {
+      "type": "personal",
+      "family_name": "Zhou",
+      "given_name": "Na"
+    },
+    "affiliations": [
+      {
+        "name": "Department of Biostatistics, School of Public Health, Cheeloo College of Medicine, Shandong University, Jinan, 250012, Shandong, China"
+      },
+      {
+        "name": "National Institute of Health Data Science of China, Shandong University, Jinan, 250012, Shandong, China"
+      }
+    ]
+  },
+  {
+    "person_or_org": {
+      "type": "personal",
+      "family_name": "Liu",
+      "given_name": "Xiao"
+    },
+    "affiliations": [
+      {
+        "name": "Department of Biostatistics, School of Public Health, Cheeloo College of Medicine, Shandong University, Jinan, 250012, Shandong, China"
+      },
+      {
+        "name": "National Institute of Health Data Science of China, Shandong University, Jinan, 250012, Shandong, China"
+      }
+    ]
+  },
+  {
+    "person_or_org": {
+      "type": "personal",
+      "family_name": "Wang",
+      "given_name": "Xinyu"
+    },
+    "affiliations": [
+      {
+        "name": "Department of Biostatistics, School of Public Health, Cheeloo College of Medicine, Shandong University, Jinan, 250012, Shandong, China"
+      },
+      {
+        "name": "National Institute of Health Data Science of China, Shandong University, Jinan, 250012, Shandong, China"
+      }
+    ]
+  },
+  {
+    "person_or_org": {
+      "type": "personal",
+      "family_name": "Liu",
+      "given_name": "Ruotong"
+    },
+    "affiliations": [
+      {
+        "name": "Department of Biostatistics, School of Public Health, Cheeloo College of Medicine, Shandong University, Jinan, 250012, Shandong, China"
+      },
+      {
+        "name": "National Institute of Health Data Science of China, Shandong University, Jinan, 250012, Shandong, China"
+      }
+    ]
+  },
+  {
+    "person_or_org": {
+      "type": "personal",
+      "family_name": "Yuan",
+      "given_name": "Guoneng"
+    },
+    "affiliations": [
+      {
+        "name": "Department of Biostatistics, School of Public Health, Cheeloo College of Medicine, Shandong University, Jinan, 250012, Shandong, China"
+      },
+      {
+        "name": "National Institute of Health Data Science of China, Shandong University, Jinan, 250012, Shandong, China"
+      }
+    ]
+  },
+  {
+    "person_or_org": {
+      "type": "personal",
+      "family_name": "Xue",
+      "given_name": "Fuzhong"
+    },
+    "affiliations": [
+      {
+        "name": "Department of Biostatistics, School of Public Health, Cheeloo College of Medicine, Shandong University, Jinan, 250012, Shandong, China"
+      },
+      {
+        "name": "National Institute of Health Data Science of China, Shandong University, Jinan, 250012, Shandong, China"
+      }
+    ]
+  },
+  {
+    "person_or_org": {
+      "type": "personal",
+      "family_name": "Hou",
+      "given_name": "Qingzhen"
+    },
+    "affiliations": [
+      {
+        "name": "Department of Biostatistics, School of Public Health, Cheeloo College of Medicine, Shandong University, Jinan, 250012, Shandong, China"
+      },
+      {
+        "name": "National Institute of Health Data Science of China, Shandong University, Jinan, 250012, Shandong, China"
+      }
+    ]
+  }
+]

@@ -1,0 +1,109 @@
+{
+  "name": "SpaBEAT Dataset Collection",
+  "version": "1.0.0",
+  "year": 2026,
+  "description": "A collection of spatial transcriptomics datasets used for evaluation and benchmarking in SpaBEAT.",
+  "repository": "https://github.com/sduhoulab/SpaBEAT",
+  "datasets": [
+    {
+      "id": "DLPFC",
+      "doi": "10.5281/zenodo.21362875",
+      "url": "https://doi.org/10.5281/zenodo.21362875"
+    },
+    {
+      "id": "HBC",
+      "doi": "10.5281/zenodo.21426542",
+      "url": "https://doi.org/10.5281/zenodo.21426542"
+    },
+    {
+      "id": "HER2_breast_tumor",
+      "doi": "10.5281/zenodo.21318241",
+      "url": "https://doi.org/10.5281/zenodo.21318241"
+    },
+    {
+      "id": "Visium_mouse_brain",
+      "doi": "10.5281/zenodo.21319528",
+      "url": "https://doi.org/10.5281/zenodo.21319528"
+    },
+    {
+      "id": "MERFISH_mouse_hypothalamus",
+      "doi": "10.5281/zenodo.21319752",
+      "url": "https://doi.org/10.5281/zenodo.21319752"
+    },
+    {
+      "id": "STARmap_mouse_brain",
+      "doi": "10.5281/zenodo.21319822",
+      "url": "https://doi.org/10.5281/zenodo.21319822"
+    },
+    {
+      "id": "Stereo_seq_mouse_embryo_E16.5",
+      "doi": "10.5281/zenodo.21319948",
+      "url": "https://doi.org/10.5281/zenodo.21319948"
+    },
+    {
+      "id": "STARmap_PLUS_mouse_mPFC",
+      "doi": "10.5281/zenodo.21320238",
+      "url": "https://doi.org/10.5281/zenodo.21320238"
+    },
+    {
+      "id": "Human_CRC_Visium_HD",
+      "doi": "10.5281/zenodo.21320852",
+      "url": "https://doi.org/10.5281/zenodo.21320852"
+    },
+    {
+      "id": "Xenium_HER2_breast_cancer",
+      "doi": "10.5281/zenodo.21349247",
+      "url": "https://doi.org/10.5281/zenodo.21349247"
+    },
+    {
+      "id": "Spatch_HCC",
+      "doi": "10.5281/zenodo.21349595",
+      "url": "https://doi.org/10.5281/zenodo.21349595"
+    },
+    {
+      "id": "Spatch_OV",
+      "doi": "10.5281/zenodo.21351581",
+      "url": "https://doi.org/10.5281/zenodo.21351581"
+    },
+    {
+      "id": "Coronal",
+      "doi": "10.5281/zenodo.22225853",
+      "url": "https://doi.org/10.5281/zenodo.22225853"
+    },
+    {
+      "id": "MOB",
+      "doi": "10.5281/zenodo.22226692",
+      "url": "https://doi.org/10.5281/zenodo.22226692"
+    },
+    {
+      "id": "Xenium_breast2",
+      "doi": "10.5281/zenodo.22226798",
+      "url": "https://doi.org/10.5281/zenodo.22226798"
+    },
+    {
+      "id": "Xenium_gene_overlap",
+      "doi": "10.5281/zenodo.22227654",
+      "url": "https://doi.org/10.5281/zenodo.22227654"
+    },
+    {
+      "id": "DLPFC_simulated",
+      "doi": "10.5281/zenodo.22275824",
+      "url": "https://doi.org/10.5281/zenodo.22275824"
+    },
+    {
+      "id": "HBC_simulated",
+      "doi": "10.5281/zenodo.22278071",
+      "url": "https://doi.org/10.5281/zenodo.22278071"
+    },
+    {
+      "id": "Xenium_breast_simulated",
+      "doi": "10.5281/zenodo.22280049",
+      "url": "https://doi.org/10.5281/zenodo.22280049"
+    },
+    {
+      "id": "Spatch_OV_simulated",
+      "doi": "10.5281/zenodo.22279989",
+      "url": "https://doi.org/10.5281/zenodo.22279989"
+    }
+  ]
+}
