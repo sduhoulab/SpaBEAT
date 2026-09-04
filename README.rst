@@ -38,6 +38,40 @@ plus a ``comparison/`` folder with the metric, UMAP, ranking and
 plotting scripts. See ``docs/source/reproducibility.rst`` for the
 end-to-end pipeline.
 
+Citation
+========
+
+If you use SpaBEAT in your research, please cite:
+
+Zhao, M., Zhang, Y., Jing, M., Zhou, N., Liu, X., Wang, X., Liu, R.,
+Yuan, G., Xue, F., & Hou, Q. (2026). SpaBEAT. GitHub.
+https://github.com/sduhoulab/SpaBEAT
+
+BibTeX
+------
+
+.. code-block:: bibtex
+
+   @software{Zhao_SpaBEAT_2026,
+     author = {
+       Zhao, Minghui and
+       Zhang, Yingxin and
+       Jing, Ming and
+       Zhou, Na and
+       Liu, Xiao and
+       Wang, Xinyu and
+       Liu, Ruotong and
+       Yuan, Guoneng and
+       Xue, Fuzhong and
+       Hou, Qingzhen
+     },
+     title = {{SpaBEAT}},
+     year = {2026},
+     publisher = {GitHub},
+     url = {https://github.com/sduhoulab/SpaBEAT}
+   }
+
 License
 --------------------
 SpaBEAT is released under the MIT License. See the LICENSE file for details.
+
