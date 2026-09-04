@@ -5,8 +5,9 @@ SpaBEAT benchmarks fourteen spatial transcriptomics datasets that span the
 batch-effect categories introduced on the :doc:`home page <index>`.
 
 Detailed provenance information for each benchmark dataset, including the data reference, publication link, original data download link or accession identifier, and corresponding processed-data deposit, is provided in Additional file 2: Table S1 of the manuscript.
-Datasets Summary
 
+
+Datasets Summary
 ----------------
 
 
