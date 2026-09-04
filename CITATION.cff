@@ -1,0 +1,35 @@
+cff-version: 1.2.0
+
+message: "If you use SpaBEAT, please cite it as below."
+
+title: "SpaBEAT"
+
+type: software
+
+authors:
+  - family-names: "Zhao"
+    given-names: "Minghui"
+  - family-names: "Zhang"
+    given-names: "Yingxin"
+  - family-names: "Jing"
+    given-names: "Ming"
+  - family-names: "Zhou"
+    given-names: "Na"
+  - family-names: "Liu"
+    given-names: "Xiao"
+  - family-names: "Wang"
+    given-names: "Xinyu"
+  - family-names: "Liu"
+    given-names: "Ruotong"
+  - family-names: "Yuan"
+    given-names: "Guoneng"
+  - family-names: "Xue"
+    given-names: "Fuzhong"
+  - family-names: "Hou"
+    given-names: "Qingzhen"
+
+url: "https://github.com/sduhoulab/SpaBEAT"
+
+year: 2026
+
+license: "MIT"
