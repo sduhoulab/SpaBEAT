@@ -9,28 +9,30 @@ Datasets Summary
 
 
 .. csv-table:: Datasets Summary
-   :header: "Dataset", "Application Scenario", "Data Link (Converted)"
-   :widths: 30, 30, 40
+   :header: "Dataset", "Application Scenario", "Data Link (Converted)", "Data Reference", "Paper Link", "Original Data Download"
+   :widths: 20, 25, 25, 30, 25, 45
    :align: center
 
-   "DLPFC", "Inter-slice, non-consecutive; Inter-slice, consecutive; Inter-sample", "https://doi.org/10.5281/zenodo.21362875"
-   "HBC", "Inter-slice, non-consecutive", "https://doi.org/10.5281/zenodo.21426542"
-   "HER2+ breast tumor (ST) ", "Inter-slice, Non-Consecutive; Inter-slice, Consecutive; Inter-sample, Different-Samples", "https://doi.org/10.5281/zenodo.21318241"
-   "Visium ST mouse brain (slice_39 / slice_44)", "Inter-slice, Consecutive Slices", "https://doi.org/10.5281/zenodo.21319528"
-   "MERFISH mouse hypothalamus (Slice_7–Slice_11)", "Inter-slice, Consecutive Slices", "https://doi.org/10.5281/zenodo.21319752"
-   "STARmap mouse brain (10 slices)", "Inter-slice, Consecutive Slices", "https://doi.org/10.5281/zenodo.21319822"
-   "Stereo-seq mouse embryo E16.5 (Slice_5–Slice_9)", "Inter-slice, Consecutive Slices", "https://doi.org/10.5281/zenodo.21319948"
-   "STARmap PLUS mouse mPFC (BZ5 / BZ9 / BZ14)", "Inter-sample, Different-Samples", "https://doi.org/10.5281/zenodo.21320238"
-   "Human CRC Visium HD", "Inter-sample, Different-Samples", "https://doi.org/10.5281/zenodo.21320852"
-   "Xenium human HER2+ breast cancer (Rep1 / Rep2)", "Inter-slice, Consecutive", "https://doi.org/10.5281/zenodo.21349247"
-   "Spatch human HCC (Visium HD + Xenium 5K)", "Cross-platform", "https://doi.org/10.5281/zenodo.21349595"
-   "Spatch human OV (Visium HD + Xenium 5K)", "Cross-platform", "https://doi.org/10.5281/zenodo.21351581"
-   "Coronal", "Cross-protocol", "https://doi.org/10.5281/zenodo.22225853"
-    "MOB", "Cross-platform", "https://doi.org/10.5281/zenodo.22226692"
-    "Xenium breast2", " ", "https://doi.org/10.5281/zenodo.22226798"
-    "Xenium gene overlap", " ", "https://doi.org/10.5281/zenodo.22227654"
-
-
+   "DLPFC", "Inter-slice, non-consecutive; Inter-slice, consecutive; Inter-sample", "https://doi.org/10.5281/zenodo.21362875", "Maynard et al. [Nature Neuroscience 2021]", "https://doi.org/10.1038/s41593-020-00787-0", "http://research.libd.org/globus"
+   "HBC", "Inter-slice, non-consecutive", "https://doi.org/10.5281/zenodo.21426542", "10x Genomics official dataset", "Not applicable (10x Genomics official dataset)", "Section 1: https://www.10xgenomics.com/datasets/human-breast-cancer-block-a-section-1-1-standard-1-1-0; Section 2: https://www.10xgenomics.com/datasets/human-breast-cancer-block-a-section-1-1-standard-1-1-0"
+   "HER2+ breast tumor (ST)", "Inter-slice, Non-Consecutive; Inter-slice, Consecutive; Inter-sample, Different-Samples", "https://doi.org/10.5281/zenodo.21318241", "Andersson et al. [Nat Commun 2021]", "https://doi.org/10.1038/s41467-021-26271-2", "EGA: EGAD00001008031 (raw, restricted access); https://doi.org/10.5281/zenodo.4751624"
+   "Visium ST mouse brain (slice_39 / slice_44)", "Inter-slice, Consecutive Slices", "https://doi.org/10.5281/zenodo.21319528", "Ortiz et al. [Sci Adv 2020]", "https://doi.org/10.1126/sciadv.abb3446", "GEO: GSE147747 (RAW); https://molecularatlas.org/"
+   "MERFISH mouse hypothalamus (Slice_7–Slice_11)", "Inter-slice, Consecutive Slices", "https://doi.org/10.5281/zenodo.21319752", "Moffitt et al. [Science 2018]", "https://doi.org/10.1126/science.aau5324", "https://doi.org/10.5061/dryad.8t8s248"
+   "STARmap mouse brain (10 slices)", "Inter-slice, Consecutive Slices", "https://doi.org/10.5281/zenodo.21319822", "Xu et al. [Nat Commun 2023]", "https://doi.org/10.1038/s41467-023-43220-3", "https://zenodo.org/records/8167488"
+   "Stereo-seq mouse embryo E16.5 (Slice_5–Slice_9)", "Inter-slice, Consecutive Slices", "https://doi.org/10.5281/zenodo.21319948", "Chen et al. [Cell 2022]", "https://doi.org/10.1016/j.cell.2022.04.003", "CNGB/CNSA: CNP0001543; https://db.cngb.org/stomics/mosta/resource/"
+   "STARmap PLUS mouse mPFC (BZ5 / BZ9 / BZ14)", "Inter-sample, Different-Samples", "https://doi.org/10.5281/zenodo.21320238", "Shi et al. [Nat Commun 2023]", "https://doi.org/10.1038/s41586-023-06569-5", "https://zenodo.org/records/10698914"
+   "Human CRC Visium HD", "Inter-sample, Different-Samples", "https://doi.org/10.5281/zenodo.21320852", "Oliveira et al. [Nature Genetics 2025]", "https://doi.org/10.1038/s41588-025-02193-3", "https://www.10xgenomics.com/products/visium-hd-spatial-gene-expression/dataset-human-crc"
+   "Xenium human HER2+ breast cancer (Rep1 / Rep2)", "Inter-slice, Consecutive", "https://doi.org/10.5281/zenodo.21349247", "Janesick et al. [Nat Commun 2023]", "https://doi.org/10.1038/s41467-023-43458-x", "GEO: GSE243280; https://www.10xgenomics.com/products/xenium-in-situ/preview-dataset-human-breast"
+   "Spatch human HCC (Visium HD + Xenium 5K)", "Cross-platform", "https://doi.org/10.5281/zenodo.21349595", "Ren et al. [Nat Commun 2025]", "https://doi.org/10.1038/s41467-025-64292-3", "GSA-Human: HRA011129; BioImage Archive: S-BIAD1900; http://spatch.pku-genomics.org/"
+   "Spatch human OV (Visium HD + Xenium 5K)", "Cross-platform", "https://doi.org/10.5281/zenodo.21351581", "Ren et al. [Nat Commun 2025]", "https://doi.org/10.1038/s41467-025-64292-3", "GSA-Human: HRA011129; BioImage Archive: S-BIAD1900; http://spatch.pku-genomics.org/"
+   "Coronal", "Cross-protocol", "https://doi.org/10.5281/zenodo.22225853", "Guo et al. [Genome Biology 2023]", "https://doi.org/10.1186/s13059-023-03078-6", "Normal: https://www.10xgenomics.com/resources/datasets/mouse-brain-section-coronal-1-standard-1-1-0; DAPI: https://www.10xgenomics.com/resources/datasets/adult-mouse-brain-section-1-coronal-stains-dapi-anti-neu-n-1-standard-1-1-0; FFPE: https://www.10xgenomics.com/resources/datasets/adult-mouse-brain-ffpe-1-standard-1-3-0"
+   "MOB", "Cross-platform", "https://doi.org/10.5281/zenodo.22226692", "10X: Guo et al. [Genome Biology 2023]; Stereo-seq: Zhang et al. [BMC Genomics 2024]; Slide-seq V2: Stickels et al. [Nature Biotechnology 2021]", "10X: https://doi.org/10.1186/s13059-023-03078-6; Stereo-seq: https://doi.org/10.1186/s12864-024-11072-w; Slide-seq V2: https://doi.org/10.1038/s41587-020-0739-1", "10X: https://www.10xgenomics.com/resources/datasets/adult-mouse-olfactory-bulb-1-standard; Stereo-seq: https://github.com/JinmiaoChenLab/SEDR_analyses; Slide-seq V2: https://singlecell.broadinstitute.org/single_cell/study/SCP815/highly-sensitive-spatial-transcriptomics-at-near-cellular-resolution-with-slide-seqv2#study-summary"
+   "Xenium breast2", "Cell segmentation", "https://doi.org/10.5281/zenodo.22226798", "Janesick et al. [bioRxiv 2025]", "https://doi.org/10.64898/2025.12.08.692193", "https://www.10xgenomics.com/datasets/xenium-ffpe-human-breast-biomarkers"
+   "Xenium gene overlap", "Gene overlap", "https://doi.org/10.5281/zenodo.22227654", "Janesick et al. [Nat Commun 2023]", "https://doi.org/10.1038/s41467-023-43458-x", "GEO: GSE243280; https://www.10xgenomics.com/products/xenium-in-situ/preview-dataset-human-breast"
+   "DLPFC simulated", "Simulated inter-slice, inter-sample", "https://doi.org/10.5281/zenodo.22275824", "Generated in this study using SRTsim/scDesign3 based on DLPFC (151507, 1 slice)", "https://doi.org/10.1038/s41593-020-00787-0", "http://research.libd.org/globus"
+   "HBC simulated", "Simulated inter-slice, inter-sample", "https://doi.org/10.5281/zenodo.22278071", "Generated in this study using SRTsim/scDesign3 based on HBC (section1, 1 slice)", "Not applicable (10x Genomics official dataset)", "https://www.10xgenomics.com/datasets/human-breast-cancer-block-a-section-1-1-standard-1-1-0"
+   "Xenium breast simulated", "Simulated inter-slice, inter-sample", "https://doi.org/10.5281/zenodo.22280049", "Generated in this study using SRTsim/scDesign3 based on Xe_breast (Rep1, 1 slice)", "https://doi.org/10.1038/s41467-023-43458-x", "https://www.10xgenomics.com/products/xenium-in-situ/preview-dataset-human-breast"
+   "Spatch OV simulated", "Simulated cross-platform", "https://doi.org/10.5281/zenodo.22279989", "Generated in this study using SRTsim/scDesign3 based on ovarian cancer Xenium (Spatch OV)", "https://doi.org/10.1038/s41467-025-64292-3", "http://spatch.pku-genomics.org/"
 Real Datasets
 -------------
 
